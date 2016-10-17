@@ -2,7 +2,13 @@ var main = function() {
 	"use strict";
 
 	$(".comment-input button").on("click", function (event) {
-		console.log("Hello World!");
+		var $new_comment = $("<p>"),
+		comment_text = $(".comment-input input").val();
+				
+		$new_comment.text(comment_text);
+		console.log($new_comment);
+		$(".comments").append($new_comment);
+		
 	});
 };
 
